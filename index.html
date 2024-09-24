@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIGHT BOOKING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="title">
+            <h1>FLIGHT BOOKING ONLINE PLATFROM</h1>
+        </div>
+        <div class="flight-container">
+            <div class="input-group">
+                <label for="origin" class="custom-label">From :</label>
+                <select name="origin" id="origin">
+                    <option value="" disabled selected hidden>From?</option>
+                    <option value="100">Bangkok - Thailand</option>
+                    <option value="500">London - UK</option>
+                    <option value="800">Tokyo - Japan</option>
+                    <option value="600">Sydney - Australia</option>
+                    <option value="400">South Korea - Seoul</option>
+                    <option value="1000">Paris - France</option>
+                    <option value="2500">New York - USA</option>
+                    <option value="2700">Rome - Italy</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="destination" class="custom-label">Destination :</label>
+                <select name="destination" id="destination">
+                    <option value="" disabled selected hidden>Where to?</option>
+                    <option value="100">Bangkok - Thailand</option>
+                    <option value="500">London - UK</option>
+                    <option value="800">Tokyo - Japan</option>
+                    <option value="600">Sydney - Australia</option>
+                    <option value="400">South Korea - Seoul</option>
+                    <option value="1000">Paris - France</option>
+                    <option value="2500">New York - USA</option>
+                    <option value="2700">Rome - Italy</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="date" class="custom-label">Date :</label>
+                <input placeholder="When is your trip?" type="text" onfocus="(this.type='date')" id="date">
+            </div>
+        </div>
+
+        <div class="status">
+            <ul class="showcase">
+                <li>
+                    <div class="seat available"></div>
+                    <small>Available</small>
+                </li>
+                <li>
+                    <div class="seat selected"></div>
+                    <small>Selected</small>
+                </li>
+                <li>
+                    <div class="seat occupied"></div>
+                    <small>Unavailable</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <!-- Seat rows -->
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+            </div>
+            <!-- Add more rows as required -->
+        </div>
+
+        <div class="summary">
+            <p class="text">
+                Price per seat: <span id="priceperseat">0</span> USD | Seat selected:
+                <span id="count">0</span> | Total payment: <span id="total">0</span> USD
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
